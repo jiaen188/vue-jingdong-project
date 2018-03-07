@@ -4,7 +4,7 @@
     padding: $padding;
     background-color: $bgcolor;
     border-radius: $radius;
-    border: 1px solid $bgcolor;
+    border: 1px solid $bgcolor; // 边框和背景色一样，看上去一种没写一样的效果
     font-size: $size;
     color: $color;
     text-align: center;
@@ -17,6 +17,7 @@
     @include flex($direction);
 }
 
+// 面板
 @mixin panel($bgcolor: #fff, $padding: 0, $margin: 20px 0, $height: 112px, $txtPadding: 0 32px, $color: #333, $fontSize: 32px) {
     background-color: $bgcolor;
     padding: $padding;
@@ -25,7 +26,7 @@
         height: $height;
         line-height: $height;
         padding: $txtPadding;
-        // 实现 。。。效果
+        // 下面的三行 实现省略号...的效果
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
