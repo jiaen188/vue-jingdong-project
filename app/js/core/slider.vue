@@ -2,11 +2,11 @@
     <section :class="cname">
         <swiper :options="options" :not-next-tick="options.noNextTick">
             <swiper-slide v-for="item in items" :key="item.href">
-                <router-link to="{ name: item.href}">
+                <router-link :to="{ name: item.href}">
                     <img :src="item.src">
                 </router-link>
             </swiper-slide>
-            <div class="swiper-pagination" v-if="options.pagination"></div>
+            <div class="swiper-pagination" v-if="options.pagination" slot="pagination"/>
         </swiper>
     </section>
 </template>
@@ -16,6 +16,10 @@ import { swiper, swiperSlide } from "vue-awesome-swiper";
 
 export default {
     props: {
+        cname: {
+            type: String,
+            default: "",
+        },
         options: {
             type: Object,
             default() {
