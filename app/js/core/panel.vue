@@ -1,7 +1,7 @@
 <template>
     <section :class="[panelClass, cname]">
         <h4>-{{title}}-</h4>
-        <solt></solt>
+        <slot></slot>
     </section>
 </template>
 
@@ -19,7 +19,7 @@ export default {
     },
     data() {
         return {
-            panelClass: 'panel'
+            panelClass: "panel"
         }
     }
 }
